@@ -51,14 +51,12 @@ df["overall"].mean() # 4.58
 # total_vote - helpful_yes = helpful_no
 
 
-df = pd.read_csv("datasets/amazon_review.csv")
-df.head()
-
 df["helpful_no"] = df["total_vote"] - df["helpful_yes"]
 df = df[["reviewerName", "overall", "helpful_yes", "helpful_no", "total_vote"]]
 df.head(15)
 df.shape
 df.info()
+
 
 #score_pos_neg_diff, score_average_rating ve wilson_lower_bound Skorlarını Hesaplama
 
